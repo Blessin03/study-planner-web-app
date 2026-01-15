@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+# IDE folders
+.vscode/
+.idea/
+
+*.log
+
+node_modules/
+dist/
