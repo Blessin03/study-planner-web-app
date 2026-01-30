@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      
+        box-sizing: border-box;
+        
+    }
+
+    a{
+        margin-bottom: 100px;
+        color: black;
+        font-size: 250%;
+    }
+
+h1{ margin-bottom: 6% ;}
+
+    #triangle-bottomleft {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid red;
+      border-right: 100px solid transparent;
+    }
+</style>
+<body>
+    <img 
+        src="assets/img/logo.png" 
+        alt="Study Planner logo" 
+        width="80" height="86" 
+        style="position : fixed; top: 10px; right: 10px;">
+
+
+<main>
+
+    <h1>
+        Study Group Planner <br> 
+        Imaginary University
+    </h1>
+   
+        <a href="student/login.html" 
+        style=" text-decoration: none; 
+                    border: 1px solid black;
+                    padding: 80px;">
+                    Students
+        </a>
+
+        <a href="facilitator/login.html" 
+        style=" text-decoration: none; 
+                    border: 1px solid black;
+                    padding: 80px;">
+                    Facilitators
+        </a>
+
+        <div id="triangle-bottomleft"></div>
+        </main>
+</body>
+</html>
