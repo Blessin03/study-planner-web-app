@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width:100%;
+    }
+
+
+    button{
+        width:100%;
+    }
+
+    #loginErrors{
+        color:red;
+    }
+</style>
+<body onload="StudentLogin.init()">
+    
+
+        <button id="menuBtn" onclick="StudentLogin.toggleMenu()">☰</button>
+
+        <div id="menuPanel" hidden>vv </div>
+    <h1>Student Login</h1>
+    <div id="loginErrors"></div>
+
+    <label for="sid">Student ID:</label>
+    <input type="text" id="sid">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+
+    <a href="#" onclick="return false;">Forgot Password?</a>
+
+
+    <button type="button" onclick="StudentLogin.onSubmit()">Login</button>
+
+
+
+    <script src="../src/js/assets/studentLogin.js"></script>
+</body>
+</html>
