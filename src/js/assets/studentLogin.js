@@ -14,3 +14,38 @@ function verifyStudentID(sid){
     if( !(Number.isInteger(Number(sid))) ) return false;
 
 }
+
+
+function verifyPwd(pwd){
+    pwd= pwd.trim();
+    if(pwd.length < 12) return false;
+
+    let hasUpper = false;
+    let hasDigit = false;
+    let hasSpecial = false;
+
+
+    for(let c of pwd){
+            if(c >= 'A' && c <= 'Z') hasUpper = true;
+            else if ( c >= '0' && c <= '9') hasDigit = true;
+            else if ( c == '&' || c == '#' || c == '$' || c == '@') hasSpecial = true;
+            else return false;
+    }
+
+
+
+    return  hasUpper && hasDigit && hasSpecial;
+
+const studentLogin = {
+    init(){
+
+    },
+
+    toggleMenu(){
+
+    },
+
+ onSubmit(){}
+};
+
+}
