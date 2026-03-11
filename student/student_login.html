@@ -3,43 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            /* display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 16px;
+            position: relative; */
+        }
+
+        #menuBtn {
+            width: auto;
+            padding: 8px 12px;
+        }
+
+        #menuPanel {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            border: 1px solid #000;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .menu-item {
+            display: block;
+        }
+
+        .form-wrap {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 16px;
+        }
+
+        #loginErrors {
+            color: red;
+            margin-bottom: 12px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 12px;
+        }
+    </style>
 </head>
-<style>
-    input{
-        width:100%;
-    }
-
-
-    button{
-        width:100%;
-    }
-
-    #loginErrors{
-        color:red;
-    }
-</style>
 <body onload="StudentLogin.init()">
-    
+    <div class="top-bar">
+        <button
+            type="button"
+            id="menuBtn"
+            onclick="StudentLogin.toggleMenu()"
+            aria-expanded="false"
+            aria-controls="menuPanel"
+        >
+            ☰
+        </button>
 
-        <button id="menuBtn" onclick="StudentLogin.toggleMenu()">☰</button>
+        <div id="menuPanel" hidden>
+            <span class="menu-item">View Planner</span>
+        </div>
+    </div>
 
-        <div id="menuPanel" hidden>vv </div>
-    <h1>Student Login</h1>
-    <div id="loginErrors"></div>
+    <div class="form-wrap">
+        <h1>Student Login</h1>
 
-    <label for="sid">Student ID:</label>
-    <input type="text" id="sid">
+        <div id="loginErrors" aria-live="polite"></div>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password">
+        <label for="sid">Student ID:</label>
+        <input type="text" id="sid">
 
-    <a href="#" onclick="return false;">Forgot Password?</a>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd">
 
+        <a href="#" onclick="return false;">Forgot Password?</a>
 
-    <button type="button" onclick="StudentLogin.onSubmit()">Login</button>
-
-
+        <button type="button" onclick="StudentLogin.onSubmit()">Log In</button>
+    </div>
 
     <script src="../src/js/assets/studentLogin.js"></script>
 </body>
